@@ -3,7 +3,13 @@ const log = require('not-fancy-log');
 const chalk = require('chalk');
 const tape = require('tape');
 
-const defaultOptions = {};
+const defaultOptions = {
+	statusCode: [200],
+	host: 'www.google.com',
+	path: '',
+	protocol: 'http',
+	queryParam: ''
+};
 defaultOptions.statusCode = [200];
 
 let testName = "";
@@ -26,8 +32,10 @@ function requestTest(options) {
 	return function (testName, path) {
 		tape(testName, function (t) {
 			t.plan(1);
-
-			needle('get', 'http://' + options.server + '.morningstar.com' + path)
+			path = path || options.path;
+			let newURL = options.protocol + '://' + options.host + path;
+			
+			needle('get', newURL)
 			.then(function (resp) {
 				t.ok(options.statusCode.includes(resp.statusCode), 'Status Code is a Redirect Code');
 			})
