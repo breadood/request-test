@@ -1,10 +1,10 @@
 {
-  "name": "request-test",
+  "name": "requests-test",
   "version": "1.0.0",
   "description": "Testing requests",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js"
+    "test": "node test.js"
   },
   "repository": {
     "type": "git",
