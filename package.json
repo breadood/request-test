@@ -1,0 +1,25 @@
+{
+  "name": "request-test",
+  "version": "1.0.0",
+  "description": "Testing requests",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/breadood/request-test.git"
+  },
+  "author": "breadood",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/breadood/request-test/issues"
+  },
+  "homepage": "https://github.com/breadood/request-test#readme",
+  "dependencies": {
+    "chalk": "^2.3.2",
+    "needle": "^2.2.0",
+    "not-fancy-log": "^1.0.0",
+    "tape": "^4.9.0"
+  }
+}
